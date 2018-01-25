@@ -54,7 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
-STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_DIRS = [STATIC_DIR, ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -122,5 +123,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
+MEDIA_URL ='/media/'
+STATIC_URL ='/static/'
