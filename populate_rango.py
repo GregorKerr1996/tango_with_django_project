@@ -64,6 +64,8 @@ def populate():
 
     
 
+    
+
  # Print out the categories we have added.
     for c in Category.objects.all():
         for p in Page.objects.filter(category=c):

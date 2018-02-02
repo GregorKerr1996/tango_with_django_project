@@ -1,13 +1,10 @@
-<html>
-	<head>
-		<title>Cat</title>
-		
-	</head>
-	<body>
-		<p> this tutorial has been put together by Gregor kerr </p>
-		<!-- Image -->
-		<img src="{{ MEDIA_URL}}cat.jpg" alt ="Picture of cat" />
-		<a href = "/rango/"> Index page </a>
-	</body>
+{% extends 'rango/base.html' %}
+<title>Cat</title>
+{% block body_block %}
+	<p> this tutorial has been put together by Gregor kerr </p>
+	<!-- Image -->
+	<img src="{{ MEDIA_URL}}cat.jpg" alt ="Picture of cat" />
+
+{% endblock %}
 	
-</html>
+	
