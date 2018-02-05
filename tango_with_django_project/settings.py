@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rango',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +52,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 ]
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
@@ -125,3 +133,4 @@ USE_TZ = True
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL ='/media/'
 STATIC_URL ='/static/'
+LOGIN_URL = '/rango/login/'
