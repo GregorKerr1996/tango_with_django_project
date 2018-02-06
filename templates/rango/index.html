@@ -5,6 +5,7 @@
 	<h1>Rango says...</h1>
 	{% if user.is_authenticated %}
 		howdy {{ user.username }}!
+		<p>visits: {{ visits }}</p>
 	{% else %}
 		hey there partner!
 	{% endif %}
