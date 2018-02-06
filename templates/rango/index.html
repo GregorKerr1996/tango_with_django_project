@@ -3,12 +3,15 @@
 
 {% block body_block %}
 	<h1>Rango says...</h1>
-	{% if user.is_authenticated %}
-		howdy {{ user.username }}!
-		<p>visits: {{ visits }}</p>
-	{% else %}
-		hey there partner!
-	{% endif %}
+	<div>
+		{% if user.is_authenticated %}
+			howdy {{ user.username }}!
+		{% else %}
+			hey there partner!
+		{% endif %}
+	</div>
+
+	<p>visits: {{ visits }}</p>
 
 	<h2>Most Liked Categories</h2>
 
@@ -46,6 +49,6 @@
 	</div>
 
 	<div>
-		<img src="{% static "images/rango1.jpg" %}" alt="Picture of Rango" />
+		<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
 	</div>
 {% endblock %}
